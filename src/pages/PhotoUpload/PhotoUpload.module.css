@@ -1,0 +1,132 @@
+.page {
+  min-height: 100vh;
+  background: var(--gray-50);
+}
+
+.content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--container-gutter) var(--space-16);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.title {
+  font-size: var(--font-3xl);
+  font-weight: 700;
+  color: var(--near-black);
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--font-base);
+  color: var(--gray-600);
+}
+
+.uploadSection {
+  animation: fadeInUp 0.5s ease 0.1s both;
+}
+
+.sampleSection {
+  margin-top: var(--space-4);
+  text-align: center;
+}
+
+.sampleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-6);
+  border: 2px dashed var(--primary-purple-light);
+  background: var(--primary-purple-subtle);
+  border-radius: var(--radius-md);
+  color: var(--primary-purple);
+  font-weight: 600;
+  font-size: var(--font-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: inherit;
+}
+
+.sampleBtn:hover {
+  background: var(--primary-purple);
+  color: var(--white);
+  border-style: solid;
+  box-shadow: var(--shadow-purple);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  animation: fadeInUp 0.5s ease 0.2s both;
+}
+
+/* Selected products preview */
+.selectedPreview {
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+}
+
+.previewLabel {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+
+.previewItems {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.previewChip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--gray-50);
+  border-radius: var(--radius-full);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  color: var(--near-black);
+}
+
+.previewChipImg {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+  color: var(--gray-400);
+  font-size: var(--font-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gray-200);
+}
