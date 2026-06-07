@@ -2,6 +2,10 @@
 
 A web application that lets users select fashion products, upload a photo of themselves, and see the product overlaid on their image. Built as a candidate assessment project.
 
+> [!IMPORTANT]
+> **Disclaimer:** This project, including all code, images, graphics, and assets, is created and used **strictly for college, educational, and personal non-commercial purposes**. It is not intended for commercial distribution or commercial use in any form.
+
+
 ## How to Run Locally
 
 ```bash

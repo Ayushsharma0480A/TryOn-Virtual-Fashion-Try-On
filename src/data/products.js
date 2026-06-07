@@ -13,8 +13,8 @@ const products = [
     name: 'Silk Wrap Dress',
     category: 'Dresses',
     price: 245.00,
-    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop&crop=top',
-    overlay: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&h=400&fit=crop&crop=top',
+    image: 'https://images.unsplash.com/flagged/photo-1585052201332-b8c0ce30972f?w=400&h=500&fit=crop&crop=top',
+    overlay: 'https://images.unsplash.com/flagged/photo-1585052201332-b8c0ce30972f?w=300&h=400&fit=crop&crop=top',
     color: '#A363DF',
   },
   {
@@ -22,8 +22,8 @@ const products = [
     name: 'Cashmere Sweater',
     category: 'Tops',
     price: 159.00,
-    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400&h=500&fit=crop&crop=top',
-    overlay: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=300&h=400&fit=crop&crop=top',
+    image: 'https://images.unsplash.com/photo-1594911771112-a7abff67c132?w=400&h=500&fit=crop&crop=top',
+    overlay: 'https://images.unsplash.com/photo-1594911771112-a7abff67c132?w=300&h=400&fit=crop&crop=top',
     color: '#E8D5B7',
   },
   {
@@ -76,8 +76,8 @@ const products = [
     name: 'Cocktail Dress',
     category: 'Dresses',
     price: 299.00,
-    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop&crop=top',
-    overlay: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&h=400&fit=crop&crop=top',
+    image: 'https://images.unsplash.com/photo-1605518224151-2db47b856b3e?w=400&h=500&fit=crop&crop=top',
+    overlay: 'https://images.unsplash.com/photo-1605518224151-2db47b856b3e?w=300&h=400&fit=crop&crop=top',
     color: '#1C1C1C',
   },
   {
@@ -85,8 +85,8 @@ const products = [
     name: 'Designer Sunglasses',
     category: 'Accessories',
     price: 185.00,
-    image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=500&fit=crop&crop=top',
-    overlay: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=400&fit=crop&crop=top',
+    image: 'https://freepngimg.com/thumb/glasses/8-2-glasses-png-images.png',
+    overlay: 'https://freepngimg.com/thumb/glasses/8-2-glasses-png-images.png',
     color: '#8B4513',
   },
 ];
