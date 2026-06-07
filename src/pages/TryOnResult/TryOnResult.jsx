@@ -49,9 +49,46 @@ export default function TryOnResult() {
         const posX = overlayPos.x + (canvas.width - overlayW) / 2;
         const posY = overlayPos.y + (canvas.height - overlayH) / 3;
 
-        ctx.globalAlpha = opacity / 100;
-        ctx.drawImage(overlayImg, posX, posY, overlayW, overlayH);
-        ctx.globalAlpha = 1;
+        // Try to remove background programmatically (chroma-key style)
+        try {
+          const tempCanvas = document.createElement('canvas');
+          tempCanvas.width = overlayImg.width;
+          tempCanvas.height = overlayImg.height;
+          const tempCtx = tempCanvas.getContext('2d');
+          tempCtx.drawImage(overlayImg, 0, 0);
+
+          const imgData = tempCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
+          const data = imgData.data;
+
+          // Sample the top-left pixel background color
+          const bgR = data[0];
+          const bgG = data[1];
+          const bgB = data[2];
+
+          // Key out background pixels (white or close to top-left color)
+          for (let i = 0; i < data.length; i += 4) {
+            const r = data[i];
+            const g = data[i + 1];
+            const b = data[i + 2];
+
+            const diff = Math.abs(r - bgR) + Math.abs(g - bgG) + Math.abs(b - bgB);
+            const isWhiteOrNearWhite = r > 240 && g > 240 && b > 240;
+
+            if (diff < 40 || isWhiteOrNearWhite) {
+              data[i + 3] = 0; // Make pixel transparent
+            }
+          }
+
+          tempCtx.putImageData(imgData, 0, 0);
+          ctx.globalAlpha = opacity / 100;
+          ctx.drawImage(tempCanvas, posX, posY, overlayW, overlayH);
+          ctx.globalAlpha = 1;
+        } catch (e) {
+          console.warn("Dynamic background removal failed (falling back):", e);
+          ctx.globalAlpha = opacity / 100;
+          ctx.drawImage(overlayImg, posX, posY, overlayW, overlayH);
+          ctx.globalAlpha = 1;
+        }
       };
 
       overlayImg.src = activeProduct.overlay;
